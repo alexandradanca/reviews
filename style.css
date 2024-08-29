@@ -1,0 +1,251 @@
+:root{
+    --bgr-color: #E7E8D8;
+    --cnt-color: #CADABF;
+    --title-color: #36529D;
+    --txt-color: #4D575F;
+    --title-size: 2vw;
+    --sub-title-size: 1.2vw;
+    --txt-size: 1vw;
+    --title-s-size: 7vw;
+    --sub-title-s-size: 5vw;
+    --txt-s-size: 3.5vw;
+    --title-m-size: 5vw;
+    --sub-title-m-size: 3.5vw;
+    --txt-m-size: 3vw;
+    --title-ls-size: 3vw;
+    --sub-title-ls-size: 2.5vw;
+    --txt-ls-size: 2vw;
+
+}
+
+body, p, h1, h4, a {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bgr-color);
+    color: var(--txt-color);
+    text-align: center;
+}
+
+main{
+    width: 60vw;
+}
+
+.flex-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews {
+    background-color: var(--cnt-color);
+    box-shadow: 0 4px 20px 5px;
+    padding: 5vh;
+}
+
+.profile-image {
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--title-color);
+}
+
+.profile-image img {
+    width: 95%;
+    height:95%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.buttons {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 9vw;
+}
+
+#job, #description, .buttons{
+    padding-bottom: 2.5vh;
+}
+
+#description {
+    width: 90%;
+}
+
+.buttons > a {
+    font-size: 5vh;
+    color: var(--title-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bolder;
+}
+
+.buttons > a:hover {
+    color: var(--txt-color);
+}
+
+.random-button {
+    background-color: transparent;
+    padding: 0.7vh 2vw;
+    border-radius: 10px;
+    color: var(--title-color);
+    border: solid 0.15vw var(--title-color);
+    transition: all 1s
+}
+
+.random-button:hover{
+    padding: 1vh 3vw;
+    color: var(--cnt-color);
+    background-color: var(--txt-color);
+    border: solid 0.15vw var(--txt-color);
+    
+}
+
+h1{
+    padding-bottom: 5vh;
+}
+
+h1, #job {
+    color: var(--title-color);
+}
+
+h1, h4 {
+    text-transform: capitalize;
+}
+
+h4 {
+    padding: 2.5vh 0;
+}
+
+#job {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1{
+    font-size: var(--title-size);
+}
+
+#author, #job {
+    font-size: var(--sub-title-size);
+}
+
+#description, #button{
+    font-size: var(--txt-size);
+}
+
+
+@media (max-width: 501px){
+    main{
+        width: 90%;
+    }
+
+    .random-button{
+        padding: 1vh 4vw;
+    }
+    .random-button:hover{
+        padding: 1.2vh 4.2vw;
+    }
+
+    h1{
+        font-size: var(--title-s-size);
+    }
+    
+    #author, #job {
+        font-size: var(--sub-title-s-size);
+    }
+    
+    #description, #button, .random-button{
+        font-size: var(--txt-s-size);
+    }
+}
+
+@media (502px <= width <= 1120px){
+    main{
+        width: 70%;
+    }
+
+    .random-button{
+        padding: 0.5vh 3vw;
+    }
+    .random-button:hover{
+        padding: 0.7vh 3.2vw;
+    }
+    
+    h1{
+        font-size: var(--title-m-size);
+    }
+    
+    #author, #job {
+        font-size: var(--sub-title-m-size);
+    }
+    
+    #description, #button, .random-button{
+        font-size: var(--txt-m-size);
+    }
+}
+
+@media (orientation:landscape) and (max-width: 1280px){
+    .random-button{
+        padding: 0.7vh 3vw;
+    }
+    .random-button:hover{
+        padding: 0.9vh 3.2vw;
+    }
+    
+    h1{
+        font-size: var(--title-ls-size);
+    }
+    
+    #author, #job {
+        font-size: var(--sub-title-ls-size);
+    }
+    
+    #description, #button, .random-button{
+        font-size: var(--txt-ls-size);
+    }
+}
+
+@media (1110px <= width <= 1119px){
+
+    .flex-c {
+        align-items: flex-start;
+    }
+
+    .reviews{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4vw;
+    }
+    
+    img{
+        grid-area: 1/1/2/2;
+    }
+
+    #author{
+        grid-area: 2/1/3/2;
+    }
+
+    #job{grid-area: 3/1/4/2;}
+
+    #description{grid-area: 1/2/3/3;}
+
+    .buttons{grid-area: 3/2/4/3;}
+
+    a{grid-area: 4/2/5/3;}
+
+    .profile-image, img, .buttons {
+        justify-self: center;
+    }
+}
