@@ -2,7 +2,8 @@
  :sparkles: <a href="https://alexandradanca.github.io/reviews/" target="_blank">Reviews</a>
 </h2>
 
-<p>This is a review section for a web page</br>It was created during front-end learning journey</p>
+<p>A visually appealing space for users to share and view feedback, building trust and credibility.
+</br>It was created during front-end learning journey</p>
 
 ## Built With
 - HTML
